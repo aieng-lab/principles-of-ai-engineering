@@ -1,0 +1,83 @@
+% !TeX root = exercise04.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{4}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% API and documentation
+
+In the last exercises, you created a model and modular pre-processing steps. Now it is time to start working on the application that will enable our users to predict the types of issues. That application will consist of a frontend and a backend. This week, you will create a REST API for the backend.
+
+\vspace{5px}
+
+Create a FLASK app that offers endpoints implementing the specifications below. It is sufficient if the endpoints return dummy data for now. Test the API with an API testing tool like \href{https://postman.com}{Postman}\footnote{\url{https://postman.com}} or \href{https://hoppscotch.io}{Hoppscotch}\footnote{\url{https://hoppscotch.io}}.
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Given the problem description, describe how flawed predictions can be minimized and how you can represent this in a graphical user interface within the application.
+            You can assume that you have some indication of whether the model is sure or not about the prediction.
+            You can also assume a case where you know the input, e.g., the language, and whether the model works well or not well with the language.
+      \item
+            Given the problem description, does the application use deductive or inductive reasoning, describe which and why.
+            Describe, what would be different in the application if it would be the other way around, e.g., different model or no model at all.
+            Briefly explain if the application can still fulfill its purpose and to what extent.
+\end{enumerate}
+
+\newpage
+\section{API specification}
+
+\subsection*{Predict issue type}
+
+\texttt{{[}POST{]}} - \texttt{\textbackslash{}api\textbackslash{}predict}
+
+\subsubsection*{Body parameters}
+
+\begin{tabular*}{\linewidth}[t]{@{}lll@{}} \toprule
+      Parameter      & Type            & Description                     \\ \midrule
+      \texttt{title} & \texttt{string} & Title of the issue              \\
+      \texttt{body}  & \texttt{string} & Body / description of the issue \\ \bottomrule
+\end{tabular*}
+
+\subsubsection*{Response parameters}
+
+
+\begin{tabular*}{\linewidth}[t]{@{}lll@{}} \toprule
+      Parameter      & Type            & Description     \\ \midrule
+      \texttt{id}    & \texttt{string} & ID of the issue \\
+      \texttt{label} & \texttt{string} & Predicted label \\ \bottomrule
+\end{tabular*}
+
+\subsection*{Correct issue type}
+
+\texttt{{[}POST{]}} - \texttt{\textbackslash{}api\textbackslash{}correct}
+
+\subsubsection*{Body parameters}
+
+\begin{tabular*}{\linewidth}[t]{@{}lll@{}} \toprule
+      Parameter      & Type            & Description     \\ \midrule
+      \texttt{id}    & \texttt{string} & ID of the issue \\
+      \texttt{label} & \texttt{string} & Corrected label \\ \bottomrule
+\end{tabular*}
+
+\subsubsection*{Response parameters}
+
+
+\begin{tabular*}{\linewidth}[t]{@{}lll@{}}
+      \toprule
+      Parameter   & Type            & Description     \\ \midrule
+      \texttt{id} & \texttt{string} & ID of the issue \\ \bottomrule
+\end{tabular*}
+\vspace{15px}
+
+
+
+\end{document}

@@ -1,0 +1,42 @@
+% !TeX root = exercise09.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{9}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% Metrics endpoint and monitoring
+
+Prometheus and Grafana are commonly used to monitor metrics of various kinds. Implement a metrics endpoint using the Prometheus client for Python.\footnote{\url{https://github.com/prometheus/client_python}} Add at least the following metrics:
+
+\begin{itemize}
+      \item Accuracy (updated after every correction)
+      \item Average prediction confidence
+      \item Number of predictions per category
+      \item Number of correct predictions per category
+      \item Number of incorrect predictions per category
+\end{itemize}
+
+A tutorial to get started with the Prometheus client in Python is available in the official \href{https://prometheus.github.io/client_python/}{documentation}\footnote{\url{https://prometheus.github.io/client_python/}}.
+
+\vspace{5px}
+
+Monitoring the data produced by the metrics endpoint requires the setup of a Prometheus server and a Grafana instance. One way to create such a setup is docker-compose. You can find a reference for such a setup \href{https://git.fim.uni-passau.de/aie/excercises/principles-of-ai-engineering/monitoring-setup}{here}\footnote{\url{https://git.fim.uni-passau.de/aie/excercises/principles-of-ai-engineering/monitoring-setup}}. If you cannot run docker due to hardware limitations, contact the TA as soon as possible.
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Describe how you would design human oversight for the described system, consider the consequences of mistakes, possibilities of reviewing model decisions and telemetry.
+      \item
+            Given the problem description, describe what could be a non-ML alternative to solve the problem.
+            Describe what would change in the system if it would be solved without machine learning.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,49 @@
+% !TeX root = exercise05.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{5}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% Including the model in the API, storing data
+
+You have now created an API, implemented a modular text pre-processing and trained a random forest model. This exercise is about including the model in the API and storing data from its predictions.
+
+\vspace{5px}
+
+Export the model from your Jupyter Notebook and integrate it into the API. Then implement the functionality for your two endpoints and re-use your text pre-processing. You will also need to decide on a database to store data.
+
+\begin{itemize}[align=left]
+      \item[\texttt{\textbackslash{}api\textbackslash{}predict}:] Generate an ID for the issue, make a prediction based on the input, and return both the predicted label and the ID. Make sure to store important data in the database.
+      \item[\texttt{\textbackslash{}api\textbackslash{}correct}:] Access the stored prediction from the database and compare the result to the corrected label. Make sure to store important data in the database.
+\end{itemize}
+
+\vspace{5px}
+
+Hint:
+The file \texttt{api\_ui\_test\_sample.zip} contains the title and description of some real-world bugs, enhancements and questions extracted from Mozilla repositories. You can use them to test your API manually. If you need more issues to test, check the JIRA or GitHub repositories of popular open source applications.
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Justify your decision for the type of database.
+      \item
+            Describe how you will modularize your model to be integrated into the project's application (outside the Jupyter notebook).
+      \item
+            Given the problem description, describe whether, in your opinion, misclassifications of bug, enhancement, question are equally bad or not and why.
+            \begin{itemize}
+                  \item
+                        Describe a setting, e.g., a project on GitHub where it might be the other way around.
+                  \item
+                        Sketch a way to mitigate the case where misclassifications of certain classes matter.
+            \end{itemize}
+\end{enumerate}
+
+\end{document}

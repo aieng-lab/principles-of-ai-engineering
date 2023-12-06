@@ -1,0 +1,36 @@
+% !TeX root = exercise03.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{3}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% A random forest model
+
+Build and train a random forest model \textbf{pipeline} with sklearn. Re-use a version of the text pre-processing from exercise 02.
+
+\vspace{5px}
+
+Hint:
+In a later exercise, you will need to integrate the model into a FLASK backend. This means you will need to modularize your pipeline and the pre-processing, such as both can be re-used in the application.
+
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Describe what the components of your model pipeline do.
+      \item
+            Describe how you will modularize your model to be integrated into the project's application (outside the Jupyter notebook).
+      \item
+            Describe the drawback of a Random Forest model in the application considering concept drift.
+            Introduce a different model which you could use in the application that would mitigate concept drift.
+\end{enumerate}
+
+\end{document}

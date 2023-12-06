@@ -1,0 +1,33 @@
+% !TeX root = exercise11.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{11}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% Retraining / updating the model
+
+While you were working on the implementation of the application, new data became available. Re-train your model using the new data set (\texttt{sample2.csv.gz} in StudIP) and data from your own database. Then include the updated model in your application.
+
+\section*{Questions}
+
+\begin{enumerate}
+    \item
+          Describe techniques for releasing the new model. Mention advantages and disadvantages.
+          \begin{itemize}
+              \item Rolling Release
+              \item Blue-Green Deployment
+              \item Canary Release
+              \item Feature Toggles
+          \end{itemize}
+    \item
+          Create a model card for the problem description, use the example from the lecture.
+\end{enumerate}
+
+\end{document}

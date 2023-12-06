@@ -1,0 +1,40 @@
+% !TeX root = exercise08.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{8}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project task}
+% Safety assurance
+
+Consider how unsafe input can be handled and how the user might be able to judge the safety of the output. Then create an initial safety box around your model:
+
+\begin{itemize}
+      \item
+            Check the language of the input and decide what should happen if a user inputs non-English text.
+      \item
+            Inform the user about the model's confidence during the label correction.
+\end{itemize}
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Given the project setting, describe the concept of a safety box.
+      \item
+            Which other measures could be used for safety assurance in the application?
+      \item
+            Describe the building blocks of fault tree analysis.
+      \item
+            Describe minimal cut set analysis.
+      \item
+            Describe failure probability analysis.
+\end{enumerate}
+
+\end{document}

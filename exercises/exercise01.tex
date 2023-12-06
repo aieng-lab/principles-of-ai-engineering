@@ -1,0 +1,65 @@
+% !TeX root = exercise01.tex
+\input{common/header}
+\begin{document}
+\newcommand{\dozenten}{Prof.~Dr.~Steffen Herbold}
+\newcommand{\vorlesung}{Principles of AI Engineering}
+\newcommand{\docauthor}{Lukas Schulte}
+\newcommand{\semester}{}
+\newcommand{\blattnummer}{1}
+\newcommand{\bistermin}{}
+\input{common/logo}
+
+
+\section*{Project description}
+% Venv, Git, and some theory
+
+The exercise will be conducted under the following, fictional, scenario:
+\vspace{5px}
+
+You are part of the AI Engineering department of a large software company. Your teams are developing software supported by an issue tracking system (like JIRA). Whenever they receive feedback, notice bugs, or require clarifications, they create a new issue and have to classify that issue into the categories "enhancement", "bug", and "question".
+\vspace{5px}
+
+You have been tasked with creating a solution that can assist them in this, using AI. This exercise deals with setting up the project repository and getting to know the software stack.
+
+\begin{enumerate}
+      \item Create a repository in the FIM GitLab
+            \begin{itemize}
+                  \item
+                        The name of the repository must be "WS2023 - Principles of AI Engineering"
+            \end{itemize}
+      \item
+            Add the TA (Lukas Schulte, lukas.schulte@uni-passau.de) as "Reporter" to your project
+      \item Clone the repository to your device
+\end{enumerate}
+
+The application you develop must be based on Python FLASK. Data analysis and model training must be done in Jupyter Notebooks. Make sure you follow best practices for developing (Python) applications:
+
+\begin{enumerate}
+      \item Commit frequently
+      \item Use expressive commit messages
+            \begin{itemize}
+                  \item "new changes", "update final III", "Monday", etc. are not expressive
+            \end{itemize}
+      \item
+            Use \href{https://www.youtube.com/watch?v=sUKgrSHSHtM}{virtual environments}\footnote{\url{https://www.youtube.com/watch?v=sUKgrSHSHtM}}, maintain a \texttt{.gitignore} file and document the requirements of your application in a \texttt{requirements.txt} file
+      \item
+            Familiarize yourself with \href{https://flask.palletsprojects.com/en}{FLASK}\footnote{\url{https://flask.palletsprojects.com/en}} and \href{https://www.youtube.com/watch?v=jNk-ZmeIz6c}{Jupyter Notebooks}\footnote{\url{https://www.youtube.com/watch?v=jNk-ZmeIz6c}}
+\end{enumerate}
+
+\newpage
+
+\section*{Questions}
+
+\begin{enumerate}
+      \item
+            Describe which machine learning model you would choose to solve the problem presented and why.
+
+      \item
+            Describe a pipeline that would best fit your proposed solution, explain which part is ML centric and why.
+
+      \item
+            Describe model and system goals for your proposed solution.
+\end{enumerate}
+
+
+\end{document}
